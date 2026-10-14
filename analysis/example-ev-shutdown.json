@@ -1,0 +1,156 @@
+{
+  "node_id": "fsae:2027:v1:f71df5552e34:EV.8.1.1",
+  "rule_id": "EV.8.1.1",
+  "document_id": "fsae:2027:v1:f71df5552e34",
+  "kind": "paragraph",
+  "parent_rule_id": "EV.8.1",
+  "ancestor_rule_ids": [
+    "EV",
+    "EV.8",
+    "EV.8.1"
+  ],
+  "title": null,
+  "text": "The Shutdown Circuit consists of these components, connected in series:\na.\nBattery Management System (BMS)  EV.8.3\nb.\nInsulation Monitoring Device (IMD)  EV.8.6\nc.\nBrake System Plausibility Device (BSPD)  EV.8.7\nd.\nInterlocks (as required)  EV.8.8\ne.\nMaster Switches (GLVMS, TSMS)  EV.8.9\nf.\nShutdown Buttons  EV.8.10\ng.\nBrake Over Travel Switch (BOTS)  T.3.3\nh.\nInertia Switch  T.9.4",
+  "children": [],
+  "source": {
+    "page_start": 105,
+    "page_end": 105,
+    "line_start": 5509,
+    "line_end_exclusive": 5526,
+    "start_bbox": [
+      72.024,
+      579.159,
+      445.485,
+      591.91
+    ],
+    "pdf_fragment": "#page=105",
+    "regions": [
+      {
+        "page": 105,
+        "bbox": [
+          72,
+          579.159,
+          546,
+          745
+        ]
+      },
+      {
+        "page": 106,
+        "bbox": [
+          72,
+          65,
+          546,
+          72.469
+        ]
+      }
+    ]
+  },
+  "extraction_notes": [
+    "source_page_has_vector_paths; visually review figures, formulas or table layout"
+  ],
+  "references": [
+    {
+      "source_rule_id": "EV.8.1.1",
+      "target_rule_id": "EV.8.3",
+      "subclause": null,
+      "literal": "EV.8.3",
+      "text_offset": 108,
+      "resolved": true,
+      "extraction": "explicit_regex"
+    },
+    {
+      "source_rule_id": "EV.8.1.1",
+      "target_rule_id": "EV.8.6",
+      "subclause": null,
+      "literal": "EV.8.6",
+      "text_offset": 154,
+      "resolved": true,
+      "extraction": "explicit_regex"
+    },
+    {
+      "source_rule_id": "EV.8.1.1",
+      "target_rule_id": "EV.8.7",
+      "subclause": null,
+      "literal": "EV.8.7",
+      "text_offset": 205,
+      "resolved": true,
+      "extraction": "explicit_regex"
+    },
+    {
+      "source_rule_id": "EV.8.1.1",
+      "target_rule_id": "EV.8.8",
+      "subclause": null,
+      "literal": "EV.8.8",
+      "text_offset": 241,
+      "resolved": true,
+      "extraction": "explicit_regex"
+    },
+    {
+      "source_rule_id": "EV.8.1.1",
+      "target_rule_id": "EV.8.9",
+      "subclause": null,
+      "literal": "EV.8.9",
+      "text_offset": 282,
+      "resolved": true,
+      "extraction": "explicit_regex"
+    },
+    {
+      "source_rule_id": "EV.8.1.1",
+      "target_rule_id": "EV.8.10",
+      "subclause": null,
+      "literal": "EV.8.10",
+      "text_offset": 310,
+      "resolved": true,
+      "extraction": "explicit_regex"
+    },
+    {
+      "source_rule_id": "EV.8.1.1",
+      "target_rule_id": "T.3.3",
+      "subclause": null,
+      "literal": "T.3.3",
+      "text_offset": 354,
+      "resolved": true,
+      "extraction": "explicit_regex"
+    },
+    {
+      "source_rule_id": "EV.8.1.1",
+      "target_rule_id": "T.9.4",
+      "subclause": null,
+      "literal": "T.9.4",
+      "text_offset": 379,
+      "resolved": true,
+      "extraction": "explicit_regex"
+    }
+  ],
+  "search_unit": {
+    "unit_id": "fsae:2027:v1:f71df5552e34:EV.8.1.1:own",
+    "rule_id": "EV.8.1.1",
+    "role": "leaf",
+    "candidate": {
+      "rule_id": "EV.8.1.1",
+      "text": "The Shutdown Circuit consists of these components, connected in series:\na.\nBattery Management System (BMS)  EV.8.3\nb.\nInsulation Monitoring Device (IMD)  EV.8.6\nc.\nBrake System Plausibility Device (BSPD)  EV.8.7\nd.\nInterlocks (as required)  EV.8.8\ne.\nMaster Switches (GLVMS, TSMS)  EV.8.9\nf.\nShutdown Buttons  EV.8.10\ng.\nBrake Over Travel Switch (BOTS)  T.3.3\nh.\nInertia Switch  T.9.4",
+      "context": [
+        {
+          "rule_id": "EV",
+          "title": "Electric Vehicles",
+          "introductory_text": ""
+        },
+        {
+          "rule_id": "EV.8",
+          "title": "Shutdown System",
+          "introductory_text": ""
+        },
+        {
+          "rule_id": "EV.8.1",
+          "title": "Shutdown Circuit",
+          "introductory_text": ""
+        },
+        {
+          "rule_id": "EV.8.1.1",
+          "title": null,
+          "introductory_text": ""
+        }
+      ]
+    }
+  }
+}

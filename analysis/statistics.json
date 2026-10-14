@@ -1,0 +1,378 @@
+{
+  "pages": 147,
+  "categories": 12,
+  "numbered_nodes": 1825,
+  "articles": 103,
+  "sections": 488,
+  "paragraphs": 1234,
+  "leaves": 1398,
+  "leaves_by_depth": {
+    "section": 162,
+    "paragraph": 1234,
+    "article": 2
+  },
+  "substantive_leaf_rules": 1397,
+  "standalone_tables": 2,
+  "pages_with_body_vector_paths": [
+    1,
+    4,
+    12,
+    13,
+    16,
+    17,
+    18,
+    19,
+    24,
+    25,
+    26,
+    29,
+    33,
+    34,
+    35,
+    36,
+    37,
+    39,
+    40,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    54,
+    56,
+    57,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    69,
+    73,
+    74,
+    75,
+    79,
+    80,
+    82,
+    85,
+    87,
+    91,
+    93,
+    94,
+    95,
+    96,
+    99,
+    100,
+    101,
+    104,
+    106,
+    108,
+    110,
+    111,
+    126,
+    135,
+    137,
+    138,
+    139,
+    140,
+    145,
+    146,
+    147
+  ],
+  "search_units": 1430,
+  "parent_introduction_units": 31,
+  "explicit_reference_occurrences": 550,
+  "unique_reference_edges": 537,
+  "unresolved_references": [],
+  "multi_page_leaf_rules": [
+    "F.3.5.3",
+    "F.4.2.2",
+    "F.4.2.5",
+    "F.5.8.3",
+    "F.5.15",
+    "F.6.5.2",
+    "F.7.8.2",
+    "F.7.9.1",
+    "F.8.2.1",
+    "F.8.3.2",
+    "F.8.5.4",
+    "F.8.8.4",
+    "F.9.1.1",
+    "F.10.3.6",
+    "F.10.5.6",
+    "T.1.8.6",
+    "T.2.3.1",
+    "T.2.4.6",
+    "T.2.6.3",
+    "T.2.8.6",
+    "T.4.2.10",
+    "T.5.6.2",
+    "VE.2.4",
+    "IC.2.4.2",
+    "IC.9.1.1",
+    "EV.6.1.2",
+    "EV.8.2.3",
+    "IN.5.1",
+    "IN.13.2",
+    "S.3.12.4",
+    "D.2.3",
+    "D.10.1.1",
+    "D.10.2.3",
+    "D.11.1.1",
+    "D.12.13.1"
+  ],
+  "own_text_characters": 265511,
+  "by_category": [
+    {
+      "category": "GR",
+      "title": "General Regulations",
+      "articles": 9,
+      "sections": 43,
+      "paragraphs": 44,
+      "leaves": 73,
+      "nodes": 96
+    },
+    {
+      "category": "AD",
+      "title": "Administrative Regulations",
+      "articles": 7,
+      "sections": 25,
+      "paragraphs": 32,
+      "leaves": 48,
+      "nodes": 64
+    },
+    {
+      "category": "PS",
+      "title": "Pre-Competition Submissions",
+      "articles": 3,
+      "sections": 8,
+      "paragraphs": 25,
+      "leaves": 26,
+      "nodes": 36
+    },
+    {
+      "category": "V",
+      "title": "Vehicle Requirements",
+      "articles": 4,
+      "sections": 12,
+      "paragraphs": 34,
+      "leaves": 38,
+      "nodes": 50
+    },
+    {
+      "category": "F",
+      "title": "Chassis and Structural",
+      "articles": 11,
+      "sections": 82,
+      "paragraphs": 230,
+      "leaves": 257,
+      "nodes": 323
+    },
+    {
+      "category": "T",
+      "title": "Technical Aspects",
+      "articles": 9,
+      "sections": 47,
+      "paragraphs": 187,
+      "leaves": 195,
+      "nodes": 243
+    },
+    {
+      "category": "VE",
+      "title": "Vehicle and Driver Equipment",
+      "articles": 3,
+      "sections": 13,
+      "paragraphs": 27,
+      "leaves": 32,
+      "nodes": 43
+    },
+    {
+      "category": "IC",
+      "title": "Internal Combustion Engine Vehicles",
+      "articles": 9,
+      "sections": 40,
+      "paragraphs": 113,
+      "leaves": 122,
+      "nodes": 162
+    },
+    {
+      "category": "EV",
+      "title": "Electric Vehicles",
+      "articles": 13,
+      "sections": 72,
+      "paragraphs": 218,
+      "leaves": 236,
+      "nodes": 303
+    },
+    {
+      "category": "IN",
+      "title": "Technical Inspection",
+      "articles": 17,
+      "sections": 57,
+      "paragraphs": 72,
+      "leaves": 101,
+      "nodes": 146
+    },
+    {
+      "category": "S",
+      "title": "Static Events",
+      "articles": 4,
+      "sections": 35,
+      "paragraphs": 84,
+      "leaves": 94,
+      "nodes": 123
+    },
+    {
+      "category": "D",
+      "title": "Dynamic Events",
+      "articles": 14,
+      "sections": 54,
+      "paragraphs": 168,
+      "leaves": 176,
+      "nodes": 236
+    }
+  ],
+  "validation": {
+    "duplicate_definitions": 0,
+    "bookmark_definitions_checked": 591,
+    "printed_page_labels_checked": 147,
+    "missing_numbered_parents": [
+      "D.8.1"
+    ],
+    "bookmark_page_mismatches": [],
+    "no_text_leaf_rules": [
+      "IC.2.1"
+    ]
+  },
+  "workload": {
+    "query": "What requirements apply to an EV battery container?",
+    "budgets_from_existing_client": {
+      "batch_size": 100,
+      "concurrency": 4,
+      "batch_budget_bytes": 60000,
+      "pair_budget_bytes": 28000
+    },
+    "batches": [
+      {
+        "questions": 55,
+        "request_bytes": 59728
+      },
+      {
+        "questions": 55,
+        "request_bytes": 59982
+      },
+      {
+        "questions": 54,
+        "request_bytes": 59362
+      },
+      {
+        "questions": 56,
+        "request_bytes": 59655
+      },
+      {
+        "questions": 46,
+        "request_bytes": 58879
+      },
+      {
+        "questions": 49,
+        "request_bytes": 59353
+      },
+      {
+        "questions": 52,
+        "request_bytes": 59474
+      },
+      {
+        "questions": 47,
+        "request_bytes": 59861
+      },
+      {
+        "questions": 48,
+        "request_bytes": 59643
+      },
+      {
+        "questions": 51,
+        "request_bytes": 59787
+      },
+      {
+        "questions": 52,
+        "request_bytes": 59734
+      },
+      {
+        "questions": 53,
+        "request_bytes": 59832
+      },
+      {
+        "questions": 53,
+        "request_bytes": 59824
+      },
+      {
+        "questions": 50,
+        "request_bytes": 58640
+      },
+      {
+        "questions": 46,
+        "request_bytes": 59282
+      },
+      {
+        "questions": 54,
+        "request_bytes": 59600
+      },
+      {
+        "questions": 54,
+        "request_bytes": 59777
+      },
+      {
+        "questions": 51,
+        "request_bytes": 59348
+      },
+      {
+        "questions": 51,
+        "request_bytes": 59991
+      },
+      {
+        "questions": 54,
+        "request_bytes": 59998
+      },
+      {
+        "questions": 55,
+        "request_bytes": 59252
+      },
+      {
+        "questions": 54,
+        "request_bytes": 59585
+      },
+      {
+        "questions": 55,
+        "request_bytes": 59327
+      },
+      {
+        "questions": 54,
+        "request_bytes": 59304
+      },
+      {
+        "questions": 56,
+        "request_bytes": 59918
+      },
+      {
+        "questions": 51,
+        "request_bytes": 59223
+      },
+      {
+        "questions": 48,
+        "request_bytes": 59426
+      },
+      {
+        "questions": 26,
+        "request_bytes": 30683
+      }
+    ],
+    "batch_count": 28,
+    "waves_at_four_workers": 7,
+    "skipped_rule_ids": [],
+    "largest_pair_bytes": 2625,
+    "total_question_bytes": 1634632,
+    "estimate_only": "Representative prompt and query; JSON bytes are NOT billed tokens or latency."
+  }
+}

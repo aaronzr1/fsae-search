@@ -1,0 +1,98 @@
+{
+  "document_id": "fsae:2027:v1:f71df5552e34",
+  "note": "Exploratory positive controls: original 53 rule/query checks plus three cross-chapter checks identified during error review. Not exhaustive labels or a held-out test set.",
+  "cases": [
+    {
+      "id": "brakes",
+      "query": "What are the rules on brakes?",
+      "essential": [
+        "T.3.1.1",
+        "T.3.1.2",
+        "T.3.1.3",
+        "T.3.1.4",
+        "T.3.1.5",
+        "T.3.1.6",
+        "T.3.1.7",
+        "T.3.1.8",
+        "T.3.1.9",
+        "T.3.1.10",
+        "T.3.2.1",
+        "T.3.2.2",
+        "T.3.2.3",
+        "T.3.2.4",
+        "T.3.3.1",
+        "T.3.3.2",
+        "T.3.3.3",
+        "T.3.3.4",
+        "T.3.3.5",
+        "T.3.4.1",
+        "T.3.4.2",
+        "T.3.4.3",
+        "T.3.4.4",
+        "IN.14.1",
+        "F.8.6.3",
+        "IN.11.2.1"
+      ]
+    },
+    {
+      "id": "shutdown",
+      "query": "What are the requirements for an EV shutdown circuit?",
+      "essential": [
+        "EV.8.1.1",
+        "EV.8.1.2",
+        "EV.8.1.3",
+        "EV.8.1.4",
+        "EV.8.1.5",
+        "EV.8.1.6",
+        "EV.8.1.7",
+        "EV.8.2.2",
+        "T.3.3.3"
+      ]
+    },
+    {
+      "id": "cockpit",
+      "query": "What are the cockpit opening and driver egress requirements?",
+      "essential": [
+        "T.1.1.1",
+        "T.1.1.2",
+        "T.1.1.3",
+        "T.1.1.4",
+        "T.1.2.1",
+        "T.1.2.2",
+        "T.1.2.3",
+        "IN.9.2.1",
+        "IN.9.2.2"
+      ]
+    },
+    {
+      "id": "regeneration",
+      "query": "Can regenerative braking replace the hydraulic brakes on an electric car?",
+      "essential": [
+        "T.3.1.2",
+        "T.3.1.3",
+        "T.3.2.4",
+        "EV.3.3.3",
+        "EV.10.6.2"
+      ]
+    },
+    {
+      "id": "grounding",
+      "query": "Do carbon-fibre panels near the high-voltage battery need bonding to chassis ground?",
+      "essential": [
+        "EV.7.7.1",
+        "EV.7.7.2"
+      ]
+    },
+    {
+      "id": "fasteners",
+      "query": "Are nyloc nuts and Loctite acceptable locking mechanisms for brake-system fasteners?",
+      "essential": [
+        "T.3.1.10",
+        "T.8.2.1",
+        "T.8.2.2",
+        "T.8.3.1",
+        "T.8.3.2"
+      ]
+    }
+  ]
+}

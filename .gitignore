@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.env
+.env.*
+!.env.example
+.Codex.json
+analysis/pages.txt
+analysis/headers-preliminary.json
+analysis/source-lines.json
+analysis/rulebook-index.json
+analysis/extraction.log
+.cache/
+data/
+.pytest_cache/
+.DS_Store
