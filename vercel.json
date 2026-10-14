@@ -1,0 +1,45 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "app": {
+      "root": "frontend",
+      "framework": "fastapi",
+      "entrypoint": "main:app",
+      "buildCommand": "python build.py",
+      "bindings": [
+        {
+          "type": "service",
+          "service": "search",
+          "format": "url",
+          "env": "SEARCH_URL"
+        }
+      ],
+      "functions": {
+        "main.py": {
+          "maxDuration": 300,
+          "excludeFiles": "{.env,.env.*,.Codex.json}"
+        }
+      }
+    },
+    "search": {
+      "root": ".",
+      "framework": "fastapi",
+      "entrypoint": "asgi:app",
+      "buildCommand": "python build.py",
+      "functions": {
+        "asgi.py": {
+          "maxDuration": 300,
+          "excludeFiles": "{.env,.env.*,.Codex.json,.cache/**,frontend/**}"
+        }
+      }
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "app"
+      }
+    }
+  ]
+}

@@ -5,7 +5,8 @@ import threading
 from uuid import uuid4
 
 from .jev import search
-from .store import ROOT, encode
+from .store import encode
+from .paths import CACHE
 
 
 class SearchService:
@@ -37,7 +38,7 @@ class SearchService:
         try:
             outcome = search(self.store, query, vehicle_type=vehicle_type, top_k=top_k,
                              threshold=threshold, progress=progress,strategy=strategy,use_cache=use_cache)
-            directory = ROOT / '.cache' / 'searches'
+            directory = CACHE / 'searches'
             directory.mkdir(parents=True, exist_ok=True)
             (directory / (identifier + '.json')).write_text(encode(outcome) + '\n')
             with self.lock:

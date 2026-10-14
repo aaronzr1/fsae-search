@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
-from .jev import configuration, plan
+from .jev import configuration, plan, search
 from .service import SearchService
 from .store import ROOT, Store
 
@@ -20,14 +20,15 @@ class SearchRequest(BaseModel):
     use_cache: bool=True
 
 
-def create_app(store=None):
+def create_app(store=None, *, synchronous=False):
     store = store or Store()
-    service = SearchService(store)
+    service = None if synchronous else SearchService(store)
 
     @asynccontextmanager
     async def lifespan(app):
         yield
-        service.close()
+        if service is not None:
+            service.close()
 
     app = FastAPI(title='FSAE Rule Search', lifespan=lifespan)
     app.state.service = service
@@ -43,7 +44,7 @@ def create_app(store=None):
                     visual_rules=sum(r['visuals']['has_visual_content'] for r in store.rules.values()),
                     jev_configured=bool(key), model=settings.model,
                     concurrency=settings.concurrency, batch_bytes=settings.batch_bytes,default_strategy='sections',
-                    active_search_id=service.active_id)
+                    active_search_id=service.active_id if service is not None else None)
 
     @app.post('/api/local-search')
     def local_search(request: SearchRequest):
@@ -66,6 +67,15 @@ def create_app(store=None):
         key, _ = configuration()
         if not key:
             raise HTTPException(503, 'Set JEV_KEY in the project .env to enable semantic search.')
+        if synchronous:
+            # Finish within this invocation; polling another instance cannot recover local jobs.
+            try:
+                output = search(store, request.query.strip(), vehicle_type=request.vehicle_type,
+                                top_k=request.top_k, threshold=request.threshold,
+                                strategy=request.strategy, use_cache=request.use_cache)
+            except Exception:
+                raise HTTPException(502, 'Search failed. Check Jev configuration and connectivity, then retry.')
+            return dict(status='done', output=output)
         identifier = service.start(request.query.strip(), request.vehicle_type, request.top_k, request.threshold,
                                    request.strategy,request.use_cache)
         if identifier is None:
@@ -74,6 +84,8 @@ def create_app(store=None):
 
     @app.get('/api/searches/{identifier}')
     def get_search(identifier: str):
+        if synchronous:
+            raise HTTPException(404, 'Search results are returned by POST /api/searches.')
         try:
             return service.get(identifier)
         except KeyError:
@@ -86,7 +98,7 @@ def create_app(store=None):
         except KeyError:
             raise HTTPException(404, 'Unknown rule or table.')
 
-    @app.get('/pdf/{sha256}')
+    @app.api_route('/pdf/{sha256}', methods=['GET', 'HEAD'])
     def pdf(sha256: str):
         if sha256 != store.document['sha256']:
             raise HTTPException(404, 'Unknown document version.')

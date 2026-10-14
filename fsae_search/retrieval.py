@@ -12,9 +12,10 @@ from uuid import uuid4
 from .jev import JevClient, configuration, search_rules, PROMPT_VERSION, size
 from .sections import SectionClient, section_units
 from .store import ROOT, STOPWORDS, encode
+from .paths import CACHE as CACHE_ROOT
 
 STRATEGIES=('sections','routed','rules')
-CACHE=ROOT/'.cache/query-cache'
+CACHE=CACHE_ROOT/'query-cache'
 ROUTE_THRESHOLD=.5
 TERM_EXPANSIONS=[
     (r'brak|regenerat','brake pedal hydraulic caliper reservoir fluid braking mechanical regeneration'),

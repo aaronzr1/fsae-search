@@ -121,7 +121,7 @@ class Store:
         self.pdf = ROOT / self.document['filename']
         if hashlib.sha256(self.pdf.read_bytes()).hexdigest() != self.document['sha256']:
             raise ValueError('PDF changed. Rebuild the index before searching.')
-        with sqlite3.connect(self.database) as conn:
+        with sqlite3.connect(self.database.resolve().as_uri() + '?mode=ro', uri=True) as conn:
             sha = conn.execute('SELECT value FROM index_metadata WHERE key="pdf_sha256"').fetchone()
             if not sha or sha[0] != self.document['sha256']:
                 raise ValueError('JSON/SQLite editions differ. Rebuild the index.')
@@ -169,7 +169,7 @@ class Store:
         if not terms:
             return dict(query=query, mode='local', results=[], related=[], complete=True, usage=None, cost_usd=0, total_matches=0)
         expression = ' OR '.join('"' + term + '"' for term in terms)
-        with sqlite3.connect(self.database) as conn:
+        with sqlite3.connect(self.database.resolve().as_uri() + '?mode=ro', uri=True) as conn:
             rows = conn.execute('SELECT unit_id, bm25(units_fts) FROM units_fts WHERE units_fts MATCH ? ORDER BY bm25(units_fts)',
                                 (expression,)).fetchall()
         results = []

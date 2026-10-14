@@ -13,3 +13,5 @@ analysis/extraction.log
 data/
 .pytest_cache/
 .DS_Store
+.vercel/
+frontend/index.html
